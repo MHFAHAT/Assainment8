@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom"; 
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 
@@ -5,9 +6,11 @@ import Navbar from "../Navbar/Navbar";
 
 const Common = () => {
     return (
-        <div>
+        <div >
              <Navbar></Navbar>
-             <div className="min-h-screen"></div>
+              
+             <Outlet></Outlet>
+             <div className="min-h-[calc(100vh-430px)]">  </div>
              <Footer></Footer>
         </div>
     );
