@@ -6,12 +6,12 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
     const location = useLocation();
     const navbarBgClass = (location.pathname === "/stat" || location.pathname === "/dashboard")
-        ? "bg-white text-black"
-        : "bg-purple-500";
+        ? " bg-white text-black"
+        : "bg-purple-500 text-white";
     return (
         <div className="relative">
-            <div className=" bg-purple-500 rounded-lg max-w-7xl mx-auto ">
-                <div className={`navbar  ${navbarBgClass} rounded-lg max-w-7xl mx-auto mt-3 text-white`}>
+            <div className="  bg-purple-500 rounded-lg max-w-7xl mx-auto ">
+                <div className={`navbar   ${navbarBgClass} rounded-lg max-w-7xl mx-auto mt-3 `}>
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
