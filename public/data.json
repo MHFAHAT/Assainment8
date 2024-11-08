@@ -1,5 +1,6 @@
 [
     {
+        "product_id": 1,
         "product_title": "HP Pavilion x360",
         "product_image": "https://i.ibb.co.com/JHtYmcg/c08928070.jpg",
         "category": "Laptops",
@@ -10,6 +11,7 @@
         "rating": 4.5
     },
     {
+        "product_id": 2,
         "product_title": "Dell Inspiron 15",
         "product_image": "https://i.ibb.co.com/3kHKFX2/c08896414.webp",
         "category": "Laptops",
@@ -20,6 +22,7 @@
         "rating": 4.3
     },
     {
+        "product_id": 3,
         "product_title": "Apple MacBook Air",
         "product_image": "https://i.ibb.co.com/brJvbCm/download.jpg",
         "category": "Laptops",
@@ -30,6 +33,7 @@
         "rating": 4.7
     },
     {
+        "product_id": 4,
         "product_title": "Lenovo ThinkPad E14",
         "product_image": "https://i.ibb.co.com/stZDpzh/download-1.jpg",
         "category": "Laptops",
@@ -40,6 +44,7 @@
         "rating": 4.4
     },
     {
+        "product_id": 5,
         "product_title": "Acer Aspire 5",
         "product_image": "https://i.ibb.co.com/ZNNfHqx/download-2.jpg",
         "category": "Laptops",
@@ -50,6 +55,7 @@
         "rating": 4.1
     },
     {
+        "product_id": 6,
         "product_title": "ASUS VivoBook 15",
         "product_image": "https://i.ibb.co.com/1RDfgJh/download-3.jpg",
         "category": "Laptops",
@@ -60,6 +66,7 @@
         "rating": 4.2
     },
     {
+        "product_id": 7,
         "product_title": "Samsung Galaxy S21",
         "product_image": "https://i.ibb.co.com/K5GMmtw/download-4.jpg",
         "category": "Phones",
@@ -70,6 +77,7 @@
         "rating": 4.6
     },
     {
+        "product_id": 8,
         "product_title": "iPhone 13",
         "product_image": "https://i.ibb.co.com/nDqfGbQ/download-5.jpg",
         "category": "Phones",
@@ -80,6 +88,7 @@
         "rating": 4.8
     },
     {
+        "product_id": 9,
         "product_title": "Apple Watch Series 7",
         "product_image": "https://i.ibb.co.com/Vtjcczw/download-6.jpg",
         "category": "Smart Watches",
@@ -90,6 +99,7 @@
         "rating": 4.9
     },
     {
+        "product_id": 10,
         "product_title": "Samsung Galaxy Watch 4",
         "product_image": "https://i.ibb.co.com/nPJT47P/download-7.jpg",
         "category": "Smart Watches",
@@ -100,6 +110,7 @@
         "rating": 4.5
     },
     {
+        "product_id": 11,
         "product_title": "Apple MacBook Pro",
         "product_image": "https://i.ibb.co.com/6tyW7sB/download-8.jpg",
         "category": "MacBook",
@@ -110,6 +121,7 @@
         "rating": 4.9
     },
     {
+        "product_id": 12,
         "product_title": "iPhone 14 Pro",
         "product_image": "https://i.ibb.co.com/z29SfSS/download-9.jpg",
         "category": "Iphone",

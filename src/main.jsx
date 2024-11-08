@@ -9,8 +9,8 @@ import Common from './Component/Common/Common.jsx';
 import Stat from './Component/Pages/Stat.jsx';
 import Dashbord from './Component/Pages/Dashboard.jsx';
 import Home from './Component/Pages/Home.jsx';
-import Cards from './Component/Cards/Cards.jsx';
-import Card from './Component/Cards/Card.jsx';
+import Cards from './Component/Cards/Cards.jsx'; 
+import Details from './Component/Details/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,12 +23,15 @@ const router = createBrowserRouter([
         loader: ()=> fetch('../category.json'), 
         children: [
           {
-            path: "/cards/:category",
+            path: "/",
             element: <Cards></Cards>,
             loader: ()=> fetch('../data.json'),
           },  
-
-
+          {
+            path: "/cards/:category",
+            element: <Cards></Cards>,
+            loader: ()=> fetch('../data.json'),
+          }, 
         ],
       },
       {
@@ -38,6 +41,12 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashbord></Dashbord>,
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
+        loader: ()=> fetch('../data.json'),
+        
       },
     ]
   },

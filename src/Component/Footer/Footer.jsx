@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <div className="bg-gray-50 py-10 pt-24">
+        <div className="bg-gray-100 py-10 pt-4">
             <div className="max-w-6xl mx-auto flex flex-col items-center gap-y-6 text-center">
 
                 <h1 className="font-bold text-xl">Gadget Heaven</h1>

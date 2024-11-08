@@ -1,11 +1,12 @@
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa6";
-import { Link, useLocation } from "react-router-dom";
- 
+import { Link, NavLink, useLocation } from "react-router-dom";
+import logo from "../../assets/img/favicon-16x16.png"
+
 
 const Navbar = () => {
     const location = useLocation();
-    const navbarBgClass = (location.pathname === "/stat" || location.pathname === "/dashboard")
+    const navbarBgClass = (location.pathname === "/stat" || location.pathname === "/dashboard" ||location.pathname.startsWith("/details") )
         ? " bg-white text-black"
         : "bg-purple-500 text-white";
     return (
@@ -31,18 +32,42 @@ const Navbar = () => {
                             <ul
                                 tabIndex={0}
                                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                <li><Link to="/">Home</Link></li>
-                                <li><Link to="/stat">Statistics</Link></li>
-                                <li><Link to="/dashboard">Dashboard</Link></li>
+                                <li><NavLink className={({ isActive }) =>
+                                    isActive
+                                        ? "bg-purple-700 text-white p-2 rounded"
+                                        : "text-black p-2 rounded"
+                                } to="/" >Home</NavLink></li>
+                                <li><NavLink className={({ isActive }) =>
+                                    isActive
+                                        ? "bg-purple-700 text-white p-2 rounded"
+                                        : "text-black p-2 rounded"
+                                } to="/stat">Statistics</NavLink></li>
+                                <li><NavLink className={({ isActive }) =>
+                                    isActive
+                                        ? "bg-purple-700 text-white p-2 rounded"
+                                        : "text-black p-2 rounded"
+                                } to="/dashboard">Dashboard</NavLink></li>
                             </ul>
                         </div>
-                        <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+                        <Link className="btn btn-ghost text-xl" to="/"> <img src={logo} alt="" />Gadget Heaven</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/stat">Statistics</Link></li>
-                            <li><Link to="/dashboard">Dashboard</Link></li>
+                            <li><Link className={({ isActive }) => 
+                                isActive 
+                                    ? "bg-purple-500 text-white p-2 rounded" 
+                                    : "text-black p-2 rounded"
+                            } to="/">Home</Link></li>
+                            <li><Link className={({ isActive }) => 
+                                isActive 
+                                    ? "bg-purple-500 text-white p-2 rounded" 
+                                    : "text-black p-2 rounded"
+                            } to="/stat">Statistics</Link></li>
+                            <li><Link className={({ isActive }) => 
+                                isActive 
+                                    ? "bg-purple-500 text-white p-2 rounded" 
+                                    : "text-black p-2 rounded"
+                            } to="/dashboard">Dashboard</Link></li>
                         </ul>
                     </div>
                     <div className="navbar-end gap-4">
@@ -50,9 +75,9 @@ const Navbar = () => {
                         <a className="btn"><FaRegHeart></FaRegHeart> </a>
                     </div>
 
-                </div> 
+                </div>
             </div>
-             
+
         </div>
     );
 };
