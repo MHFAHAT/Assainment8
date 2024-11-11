@@ -20,6 +20,7 @@ const Banner = ({ text1, text2, para }) => {
                 {HOME.pathname === '/home' && (
                     <button className="btn bg-white rounded-lg text-purple-500">Shop now</button>
                 )}
+                 
             </div>
 
         </div>

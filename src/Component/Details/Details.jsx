@@ -8,6 +8,7 @@ import ReactStars from "react-rating-stars-component";
 import React from "react";
 import { render } from "react-dom";
 import { addcard, gettheval } from "../../utils/indes";
+import { add } from "../../utils/cart";
 
 
 
@@ -17,6 +18,7 @@ const Details = () => {
     const data = useLoaderData();
     const [gadet, Setgadet] = useState({});
     const [disable,Setdisabled]=useState(false)
+    const [disabl,Setdisable]=useState(false)
     useEffect(() => {  
         const single = data.find(item => item.product_id === parseInt(id))
         Setgadet(single);
@@ -34,6 +36,12 @@ const Details = () => {
     const handlecard= (gadet) =>{
         addcard(gadet); 
         Setdisabled(true);
+    }
+    const handlecart = (gadet)=>{ 
+            add(gadet); 
+            Setdisable(true);
+         
+
     }
 
     const firstExample = {
@@ -66,7 +74,7 @@ const Details = () => {
                             <ReactStars {...firstExample} />
                         <div className="flex gap-3">
 
-                        <button className="btn bg-purple-600 flex justify-start w-[140px] py-[11px} px-[22px]">Get Started<BsCart3></BsCart3></button>
+                        <button disabled = {disabl} onClick={()=>handlecart(gadet)} className="btn bg-purple-600 flex justify-start w-[140px] py-[11px} px-[22px]">Get Started<BsCart3></BsCart3></button>
                          
                            <button 
                            disabled = {disable}

@@ -6,9 +6,12 @@ import logo from "../../assets/img/favicon-16x16.png"
 
 const Navbar = () => {
     const location = useLocation();
-    const navbarBgClass = (location.pathname === "/stat" || location.pathname === "/dashboard" ||location.pathname.startsWith("/details") )
-        ? " bg-white text-black"
-        : "bg-purple-500 text-white";
+    const navbarBgClass = location.pathname === "/" 
+    ? "bg-purple-500 text-white" 
+    : "bg-white text-black";
+    // const navbarBgClass = (location.pathname === "/stat" || location.pathname === "/dashboard" ||location.pathname.startsWith("/details") )
+    //     ? " bg-white text-black"
+    //     : "bg-purple-500 text-white";
     return (
         <div className="relative">
             <div className="  bg-purple-500 rounded-lg max-w-7xl mx-auto ">

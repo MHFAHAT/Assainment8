@@ -11,6 +11,8 @@ import Dashbord from './Component/Pages/Dashboard.jsx';
 import Home from './Component/Pages/Home.jsx';
 import Cards from './Component/Cards/Cards.jsx'; 
 import Details from './Component/Details/Details.jsx';
+import Whishlist from './Component/Pages/Whishlist.jsx';
+import Cart from './Component/Pages/Cart.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +43,22 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashbord></Dashbord>,
+        children: [
+          {
+            path: "whishlist",
+            element: <Whishlist></Whishlist>,
+          },
+          {
+            path: "cart",
+            element: <Cart></Cart>,
+          },
+          {
+            path: "/dashboard",
+            element: <Cart></Cart>,
+          },
+        ],
       },
+      
       {
         path: "/details/:id",
         element: <Details></Details>,

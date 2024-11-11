@@ -23,7 +23,7 @@ const addcard =card => {
     if(exist) return toast.warn('Alreday added as favorates')
    fav.push(card)
    localStorage.setItem('favorites',(JSON.stringify(fav)))  
-   toast.success('Successfully added', {
+   toast.success('Successfully added to favoroutes', {
     position: "top-center",
     autoClose: 5000, 
     });
