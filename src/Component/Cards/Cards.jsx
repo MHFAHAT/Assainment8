@@ -13,7 +13,7 @@ const Cards = () => {
             Setindicard(newdata);
         }
         else {
-            Setindicard(valu1.slice(0,6));
+            Setindicard(valu1.slice(0,9));
         }
     }, [valu1, category])
     return (

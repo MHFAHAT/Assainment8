@@ -11,8 +11,18 @@ import { NavLink, Outlet } from "react-router-dom";
                 <p>From smart devices to the coolest accessories, we have it all!</p>
 
                 <div className="space-x-3">
-                    <NavLink to='/dashboard/cart' className="btn btn-md">Cart</NavLink>
-                    <NavLink to='/dashboard/whishlist' className="btn">Wishlist</NavLink>
+                    <NavLink className={({ isActive }) =>
+                                    isActive
+                                        ? "bg-purple-700 text-white btn p-2 rounded"
+                                        : "text-black bg-white btn p-2 rounded"
+                                } to='/dashboard/cart' >Cart</NavLink>
+                    <NavLink 
+                    className={({ isActive }) =>
+                      isActive
+                          ? "bg-purple-700 text-white btn p-2 rounded"
+                          : "text-black bg-white btn p-2 rounded"
+                  } 
+                    to='/dashboard/whishlist'  >Wishlist</NavLink>
                 </div>
               </div>
               <Outlet></Outlet>
