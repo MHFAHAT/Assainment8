@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css' 
+import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -9,7 +9,7 @@ import Common from './Component/Common/Common.jsx';
 import Stat from './Component/Pages/Stat.jsx';
 import Dashbord from './Component/Pages/Dashboard.jsx';
 import Home from './Component/Pages/Home.jsx';
-import Cards from './Component/Cards/Cards.jsx'; 
+import Cards from './Component/Cards/Cards.jsx';
 import Details from './Component/Details/Details.jsx';
 import Whishlist from './Component/Pages/Whishlist.jsx';
 import Cart from './Component/Pages/Cart.jsx';
@@ -24,27 +24,27 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('../category.json'), 
+        loader: () => fetch('../category.json'),
         children: [
           {
             path: "/",
             element: <Cards></Cards>,
-            loader: ()=> fetch('../data.json'),
-          },  
+            loader: () => fetch('../data.json'),
+          },
           {
             path: "/cards/:category",
             element: <Cards></Cards>,
-            loader: ()=> fetch('../data.json'),
-          }, 
+            loader: () => fetch('../data.json'),
+          },
         ],
       },
       {
-        path: "/stat",
+        path: "stat",
         element: <Stat></Stat>,
         errorElement: <Error></Error>,
       },
       {
-        path: "/dashboard",
+        path: "dashboard",
         element: <Dashbord></Dashbord>,
         errorElement: <Error></Error>,
         children: [
@@ -62,22 +62,22 @@ const router = createBrowserRouter([
           },
         ],
       },
-      
+
       {
         path: "/details/:id",
         element: <Details></Details>,
-        loader: ()=> fetch('../data.json'),
+        loader: () => fetch('../data.json'),
         errorElement: <Error></Error>,
-        
+
       },
     ]
   },
-  
+
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    
+
     <RouterProvider router={router} />
   </StrictMode>,
 )

@@ -38,9 +38,9 @@ const Navbar = () => {
                                 <li><NavLink className="p-2 rounded"
                                     onClick={`active`} to="/" >Home</NavLink></li>
                                 <li><NavLink className="p-2 rounded"
-                                    onClick={`active`} to="/stat">Statistics</NavLink></li>
+                                    onClick={`active`} to="stat">Statistics</NavLink></li>
                                 <li><NavLink className="p-2 rounded"
-                                    onClick={`active`} to="/dashboard">Dashboard</NavLink></li>
+                                    onClick={`active`} to="dashboard">Dashboard</NavLink></li>
                             </ul>
                         </div>
                         <Link className="btn btn-ghost text-xl" to="/"> Gadget Heaven</Link>
@@ -50,9 +50,9 @@ const Navbar = () => {
                             <li><NavLink className="p-2 rounded"
                                 onClick={`active`} to="/" >Home</NavLink></li>
                             <li><NavLink className="p-2 rounded"
-                                onClick={`active`} to="/stat">Statistics</NavLink></li>
+                                onClick={`active`} to="stat">Statistics</NavLink></li>
                             <li><NavLink className="p-2 rounded"
-                                onClick={`active`} to="/dashboard">Dashboard</NavLink></li>
+                                onClick={`active`} to="dashboard">Dashboard</NavLink></li>
                         </ul>
                     </div>
                     <div className="navbar-end gap-4">

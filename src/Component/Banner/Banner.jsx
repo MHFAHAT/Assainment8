@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Banner = ({ text1, text2, para }) => {
     const HOME = useLocation();
-    const hclass =   (HOME.pathname === "/stat" || HOME.pathname === "/dashboard")
+    const hclass =   (HOME.pathname === "stat" || HOME.pathname === "dashboard")
     ? " h-[129px]"
     : "h-[550px] max-w-7xl mx-auto";
     return (
@@ -18,7 +18,7 @@ const Banner = ({ text1, text2, para }) => {
                 </p>
 
                 {HOME.pathname === '/' && (
-                    <NavLink to='/dashboard' className="btn bg-white rounded-lg text-purple-500">Shop now</NavLink>
+                    <NavLink to='dashboard' className="btn bg-white rounded-lg text-purple-500">Shop now</NavLink>
                 )}
                  
             </div>
