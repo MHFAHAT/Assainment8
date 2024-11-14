@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import PropTypes from 'prop-types';
   
 
 const Diffcata = ({categories}) => {
@@ -21,5 +21,7 @@ const Diffcata = ({categories}) => {
         </div>
     );
 };
-
+Diffcata.propTypes = {
+    categories: PropTypes.string.isRequired,  
+}
 export default Diffcata;

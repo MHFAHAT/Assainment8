@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 
 const Banner = ({ text1, text2, para }) => {
@@ -27,5 +27,9 @@ const Banner = ({ text1, text2, para }) => {
 
     );
 };
-
+Banner.propTypes = {
+    text1: PropTypes.string.isRequired, 
+    text2: PropTypes.string.isRequired, 
+    para: PropTypes.string.isRequired,  
+}
 export default Banner;

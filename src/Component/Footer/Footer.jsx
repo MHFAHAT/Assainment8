@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="border-t border-gray-300 mt-8">
                 <div className="max-w-6xl mx-auto grid grid-cols-3 gap-y-4 text-center text-gray-600 py-6">
                     <nav>
-                        <h6 className="text-lg font-sbold mb-2">Services</h6>
+                        <h6 className="text-lg font-bold mb-2">Services</h6>
                         <a href="#" className="block hover:underline">Product Support</a>
                         <a href="#" className="block hover:underline">Order Tracking</a>
                         <a href="#" className="block hover:underline">Shipping & Delivery</a>

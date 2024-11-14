@@ -1,5 +1,5 @@
 import { ImCross } from "react-icons/im";
-
+import PropTypes from 'prop-types';
 const Cartsingle = ({value}) => {
     const { product_title, product_image, price, description } = value;
     return (
@@ -21,5 +21,7 @@ const Cartsingle = ({value}) => {
         </div>
     );
 };
-
+Cartsingle.propTypes = {
+    value: PropTypes.object.isRequired,  
+}
 export default Cartsingle;

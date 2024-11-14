@@ -1,17 +1,17 @@
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa6";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import logo from "../../assets/img/favicon-16x16.png"
+import { Link, NavLink, useLocation } from "react-router-dom"; 
+import './Nav.css'
 
 
 const Navbar = () => {
     const location = useLocation();
-    const navbarBgClass = location.pathname === "/" 
-    ? "bg-purple-500 text-white" 
-    : "bg-white text-black";
-    // const navbarBgClass = (location.pathname === "/stat" || location.pathname === "/dashboard" ||location.pathname.startsWith("/details") )
-    //     ? " bg-white text-black"
-    //     : "bg-purple-500 text-white";
+    const navbarBgClass = location.pathname === "/"
+        ? "bg-purple-500 text-white"
+        : (location.pathname === "/stat" || location.pathname === "/dashboard" || location.pathname.startsWith("/details")|| location.pathname === "/dashboard/cart"|| location.pathname === "/dashboard/whishlist")
+            ? "bg-white text-black"
+            : "bg-purple-500 text-white";
+
     return (
         <div className="relative">
             <div className="  bg-purple-500 rounded-lg max-w-7xl mx-auto ">
@@ -35,42 +35,24 @@ const Navbar = () => {
                             <ul
                                 tabIndex={0}
                                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                <li><NavLink className={({ isActive }) =>
-                                    isActive
-                                        ? "bg-purple-700 text-white p-2 rounded"
-                                        : "text-black p-2 rounded"
-                                } to="/" >Home</NavLink></li>
-                                <li><NavLink className={({ isActive }) =>
-                                    isActive
-                                        ? "bg-purple-700 text-white p-2 rounded"
-                                        : "text-black p-2 rounded"
-                                } to="/stat">Statistics</NavLink></li>
-                                <li><NavLink className={({ isActive }) =>
-                                    isActive
-                                        ? "bg-purple-700 text-white p-2 rounded"
-                                        : "text-black p-2 rounded"
-                                } to="/dashboard">Dashboard</NavLink></li>
+                                <li><NavLink className="p-2 rounded"
+                                    onClick={`active`} to="/" >Home</NavLink></li>
+                                <li><NavLink className="p-2 rounded"
+                                    onClick={`active`} to="/stat">Statistics</NavLink></li>
+                                <li><NavLink className="p-2 rounded"
+                                    onClick={`active`} to="/dashboard">Dashboard</NavLink></li>
                             </ul>
                         </div>
-                        <Link className="btn btn-ghost text-xl" to="/"> <img src={logo} alt="" />Gadget Heaven</Link>
+                        <Link className="btn btn-ghost text-xl" to="/"> Gadget Heaven</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
-                            <li><Link className={({ isActive }) => 
-                                isActive 
-                                    ? "bg-purple-500 text-white p-2 rounded" 
-                                    : "text-black p-2 rounded"
-                            } to="/">Home</Link></li>
-                            <li><Link className={({ isActive }) => 
-                                isActive 
-                                    ? "bg-purple-500 text-white p-2 rounded" 
-                                    : "text-black p-2 rounded"
-                            } to="/stat">Statistics</Link></li>
-                            <li><Link className={({ isActive }) => 
-                                isActive 
-                                    ? "bg-purple-500 text-white p-2 rounded" 
-                                    : "text-black p-2 rounded"
-                            } to="/dashboard">Dashboard</Link></li>
+                            <li><NavLink className="p-2 rounded"
+                                onClick={`active`} to="/" >Home</NavLink></li>
+                            <li><NavLink className="p-2 rounded"
+                                onClick={`active`} to="/stat">Statistics</NavLink></li>
+                            <li><NavLink className="p-2 rounded"
+                                onClick={`active`} to="/dashboard">Dashboard</NavLink></li>
                         </ul>
                     </div>
                     <div className="navbar-end gap-4">

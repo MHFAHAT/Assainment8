@@ -4,8 +4,8 @@ import Banner from "../Banner/Banner";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa6";
 import { IoIosStarHalf } from "react-icons/io";
-import ReactStars from "react-rating-stars-component";  
-import { addcard, gettheval } from "../../utils/indes";
+import ReactStars from "react-rating-stars-component";
+import { addcard } from "../../utils/indes";
 import { add } from "../../utils/cart";
 
 
@@ -29,8 +29,7 @@ const Details = () => {
         // }
     }, [data, id])
 
-    const { product_title, product_image, price, product_id, category, description, Specification, availability, rating
-    } = gadet;
+    const { product_image, price, Specification, } = gadet;
     const handlecard = (gadet) => {
         addcard(gadet);
         Setdisabled(true);

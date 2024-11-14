@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import PropTypes from 'prop-types';
  
 
 
@@ -28,5 +28,7 @@ const Card = ({ cardinfo }) => {
         </div>
     );
 };
-
+Card.propTypes = {
+    cardinfo: PropTypes.object.isRequired,  
+}
 export default Card;

@@ -1,4 +1,5 @@
 import { ImCross } from "react-icons/im";
+import PropTypes from 'prop-types';
 
 const Singlewish = ({ value }) => {
     const { product_title, product_image, price, description } = value;
@@ -20,5 +21,7 @@ const Singlewish = ({ value }) => {
         </div>
     );
 };
-
+Singlewish.propTypes = {
+    value: PropTypes.object.isRequired,  
+}
 export default Singlewish;
