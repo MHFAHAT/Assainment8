@@ -13,11 +13,13 @@ import Cards from './Component/Cards/Cards.jsx';
 import Details from './Component/Details/Details.jsx';
 import Whishlist from './Component/Pages/Whishlist.jsx';
 import Cart from './Component/Pages/Cart.jsx';
+import Error from './Error/Error.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Common></Common>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -39,10 +41,12 @@ const router = createBrowserRouter([
       {
         path: "/stat",
         element: <Stat></Stat>,
+        errorElement: <Error></Error>,
       },
       {
         path: "/dashboard",
         element: <Dashbord></Dashbord>,
+        errorElement: <Error></Error>,
         children: [
           {
             path: "whishlist",
@@ -63,6 +67,7 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <Details></Details>,
         loader: ()=> fetch('../data.json'),
+        errorElement: <Error></Error>,
         
       },
     ]

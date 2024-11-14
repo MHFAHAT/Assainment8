@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 
 
@@ -17,8 +17,8 @@ const Banner = ({ text1, text2, para }) => {
                     {para}
                 </p>
 
-                {HOME.pathname === '/home' && (
-                    <button className="btn bg-white rounded-lg text-purple-500">Shop now</button>
+                {HOME.pathname === '/' && (
+                    <NavLink to='/dashboard' className="btn bg-white rounded-lg text-purple-500">Shop now</NavLink>
                 )}
                  
             </div>

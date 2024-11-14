@@ -4,9 +4,7 @@ import Banner from "../Banner/Banner";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa6";
 import { IoIosStarHalf } from "react-icons/io";
-import ReactStars from "react-rating-stars-component";
-import React from "react";
-import { render } from "react-dom";
+import ReactStars from "react-rating-stars-component";  
 import { addcard, gettheval } from "../../utils/indes";
 import { add } from "../../utils/cart";
 
